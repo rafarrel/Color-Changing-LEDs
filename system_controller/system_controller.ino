@@ -38,6 +38,6 @@ void loop() {
     } else if (testColor == Red) {
       setLEDColor(RED);
     } else if (testColor == TestC) {
-      setLEDColor(TEST_C);
+      setLEDColor(0, 0, 0);
     }
 }

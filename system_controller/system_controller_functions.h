@@ -14,5 +14,12 @@ void setLEDColor(LEDColor color) {
     analogWrite( BLUE_LED, color.bluePWM );
 }
 
+/* This version can be used for testing purposes. */
+void setLEDColor(int redPWM, int greenPWM, int bluePWM) {
+    analogWrite(  RED_LED, redPWM  );
+    analogWrite(GREEN_LED, greenPWM);
+    analogWrite( BLUE_LED, bluePWM );
+}
+
 
 #endif //SYSTEM_CONTROLLER_FUNCTIONS
