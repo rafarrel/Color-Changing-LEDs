@@ -14,7 +14,8 @@ const LEDColor   CYAN = {  0, 255, 255};
 const LEDColor PURPLE = {128,   0, 128};
 const LEDColor  GREEN = {  0, 255,   0};
 const LEDColor ORANGE = {255, 165,   0};
-const LEDColor    RED = {255,   0,   0};   
+const LEDColor    RED = {255,   0,   0};
+const LEDColor TEST_C = {  0,   0,   0};  // THIS IS FOR TESTING AND CAN BE REMOVED AFTER   
 
 
 #endif //SYSTEM_CONTROLLER_SETTINGS_H

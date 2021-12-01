@@ -10,7 +10,8 @@ typedef enum COLOR_NAME {
     Purple,
      Green,
     Orange,
-       Red
+       Red,
+     TestC
 } Color;
 
 /* 

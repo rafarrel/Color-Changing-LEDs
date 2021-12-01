@@ -24,7 +24,7 @@ void setup() {
 
 void loop() {
     // Change color for testing
-    Color testColor = Cyan;  
+    Color testColor = TestC;
 
     // Testing code for PWM
     if (testColor == Cyan) {
@@ -37,5 +37,7 @@ void loop() {
       setLEDColor(ORANGE);
     } else if (testColor == Red) {
       setLEDColor(RED);
+    } else if (testColor == TestC) {
+      setLEDColor(TEST_C);
     }
 }
