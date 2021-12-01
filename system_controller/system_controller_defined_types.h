@@ -1,6 +1,6 @@
 #ifndef SYSTEM_CONTROLLER_DEFINED_TYPES_H
 #define SYSTEM_CONTROLLER_DEFINED_TYPES_H
-/**************************************************************/
+
 
 /* 
  * Color names for the colors the "RGB" LED can change to. 
@@ -24,5 +24,5 @@ typedef struct LED_PWMS {
     int  bluePWM;
 } LEDColor;
 
-/**************************************************************/
+
 #endif //SYSTEM_CONTROLLER_DEFINED_TYPES_H

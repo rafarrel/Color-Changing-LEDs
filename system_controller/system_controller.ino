@@ -8,7 +8,7 @@
  *    1) PWM -> Pulse Width Modulation
  */
 #include "system_controller_functions.h"
-/**************************************************************/
+
 
 void setup() {
     // Initialize output pins for PWM
@@ -39,5 +39,3 @@ void loop() {
       setLEDColor(RED);
     }
 }
-
-/**************************************************************/
