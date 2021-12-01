@@ -7,26 +7,28 @@
  * Term legend:
  *    1) PWM -> Pulse Width Modulation
  */
+#include "project_settings.h"
 
-/**************************************************************/
 
-// Pins (change placeholder values)
-const int RED   = 0;
-const int GREEN = 1;
-const int BLUE  = 2;
-
-/**************************************************************/
 void setup() {
   // Initialize output pins for PWM
-  pinMode(RED  , OUTPUT)
-  pinMode(GREEN, OUTPUT)
-  pinMode(BLUE , OUTPUT)
+  pinMode(  RED_LED, OUTPUT);
+  pinMode(GREEN_LED, OUTPUT);
+  pinMode( BLUE_LED, OUTPUT);
+
+  // Set output pins to be off initially
+  analogWrite(  RED_LED, 255);
+  analogWrite(GREEN_LED, 255);
+  analogWrite( BLUE_LED, 255);
 }
 
 void loop() {
   // Testing code for PWM
-  //          LED  , "Brightness"
-  analogWrite(RED  , 32 );
-  analogWrite(GREEN, 78 );
-  analogWrite(BLUE , 105);
+  Color test = Purple;  // Change color for testing
+  
+  if (test == Cyan) {
+    //setLEDColor(CYAN);
+  } else if (test == Purple) {
+    //setLEDColor(PURPLE);
+  }
 }
