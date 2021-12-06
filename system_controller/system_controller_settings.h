@@ -1,13 +1,14 @@
 #ifndef SYSTEM_CONTROLLER_SETTINGS_H
 #define SYSTEM_CONTROLLER_SETTINGS_H
+#define NUM_LEDS 2
 
 #include "system_controller_defined_types.h"
 
 
 // Pins 
-const int   RED_LED = 3;
-const int GREEN_LED = 5;
-const int  BLUE_LED = 6;
+int   RED_LED[] = {3,  9};
+int GREEN_LED[] = {5, 10};
+int  BLUE_LED[] = {6, 11};
 
 // LED Colors           (  R,   G,   B)
 const LEDColor   CYAN = {  0, 255, 255};

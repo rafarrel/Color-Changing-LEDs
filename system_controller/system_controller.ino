@@ -11,15 +11,17 @@
 
 
 void setup() {
-    // Initialize output pins for PWM
-    pinMode(  RED_LED, OUTPUT);
-    pinMode(GREEN_LED, OUTPUT);
-    pinMode( BLUE_LED, OUTPUT);
+    for (int i=0; i<NUM_LEDS; ++i) {
+        // Initialize output pins for PWM
+        pinMode(  RED_LED[i], OUTPUT);
+        pinMode(GREEN_LED[i], OUTPUT);
+        pinMode( BLUE_LED[i], OUTPUT);
 
-    // Set output pins to be off initially
-    analogWrite(  RED_LED, 255);
-    analogWrite(GREEN_LED, 255);
-    analogWrite( BLUE_LED, 255);
+        // Set output pins to be off initially
+        analogWrite(  RED_LED[i], 255 - 0);
+        analogWrite(GREEN_LED[i], 255 - 0);
+        analogWrite( BLUE_LED[i], 255 - 0);
+    }
 }
 
 void loop() {
@@ -38,6 +40,6 @@ void loop() {
     } else if (testColor == Red) {
       setLEDColor(RED);
     } else if (testColor == TestC) {
-      setLEDColor(0, 0, 0);
+      setLEDColor(255, 255, 255);
     }
 }
