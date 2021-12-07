@@ -11,6 +11,9 @@
 
 
 void setup() {
+    // Initialize serial port connection
+    Serial.begin(9600);
+    
     for (int i=0; i<NUM_LEDS; ++i) {
         // Initialize output pins for PWM
         pinMode(  RED_LED[i], OUTPUT);
@@ -25,21 +28,28 @@ void setup() {
 }
 
 void loop() {
-    // Change color for testing
-    Color testColor = TestC;
+    // Testing input from computer
+    String testInput = "";
+    if (Serial.available()>0){
+        testInput = Serial.readString();
+        Serial.println(testInput);
+    }
 
     // Testing code for PWM
-    if (testColor == Cyan) {
+    if (testInput == "Really Soft\n") {
       setLEDColor(CYAN);
-    } else if (testColor == Purple) {
+    } else if (testInput == "Soft\n") {
       setLEDColor(PURPLE);
-    } else if (testColor == Green) {
+    } else if (testInput == "Medium\n") {
       setLEDColor(GREEN);
-    } else if (testColor == Orange) {
+    } else if (testInput == "Loud\n") {
       setLEDColor(ORANGE);
-    } else if (testColor == Red) {
+    } else if (testInput == "Really Loud\n") {
       setLEDColor(RED);
-    } else if (testColor == TestC) {
-      setLEDColor(255, 255, 255);
+    } else {
+      setLEDColor(0, 0, 0);
     }
+
+    // Delay for testing that color is displayed
+    delay(2000);
 }
