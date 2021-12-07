@@ -18,9 +18,9 @@ void setup() {
         pinMode( BLUE_LED[i], OUTPUT);
 
         // Set output pins to be off initially
-        analogWrite(  RED_LED[i], 255 - 0);
-        analogWrite(GREEN_LED[i], 255 - 0);
-        analogWrite( BLUE_LED[i], 255 - 0);
+        analogWrite(  RED_LED[i], convertPWM(0));
+        analogWrite(GREEN_LED[i], convertPWM(0));
+        analogWrite( BLUE_LED[i], convertPWM(0));
     }
 }
 

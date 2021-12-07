@@ -1,9 +1,11 @@
 #ifndef SYSTEM_CONTROLLER_SETTINGS_H
 #define SYSTEM_CONTROLLER_SETTINGS_H
-#define NUM_LEDS 2
 
 #include "system_controller_defined_types.h"
 
+
+// Number of RGB LED Pairs
+const int NUM_LEDS = 2;
 
 // Pins 
 int   RED_LED[] = {3,  9};
