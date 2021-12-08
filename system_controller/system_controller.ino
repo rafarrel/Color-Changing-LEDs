@@ -32,24 +32,20 @@ void loop() {
     String testInput = "";
     if (Serial.available()>0){
         testInput = Serial.readString();
-        Serial.println(testInput);
     }
 
     // Testing code for PWM
-    if (testInput == "Really Soft\n") {
+    if (testInput == "Really Soft") {
       setLEDColor(CYAN);
-    } else if (testInput == "Soft\n") {
+    } else if (testInput == "Soft") {
       setLEDColor(PURPLE);
-    } else if (testInput == "Medium\n") {
+    } else if (testInput == "Medium") {
       setLEDColor(GREEN);
-    } else if (testInput == "Loud\n") {
+    } else if (testInput == "Loud") {
       setLEDColor(ORANGE);
-    } else if (testInput == "Really Loud\n") {
+    } else if (testInput == "Really Loud") {
       setLEDColor(RED);
-    } else {
+    } else if (testInput == "Off") {
       setLEDColor(0, 0, 0);
     }
-
-    // Delay for testing that color is displayed
-    delay(2000);
 }
