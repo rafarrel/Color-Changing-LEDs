@@ -1,7 +1,7 @@
 /* 
- * TODO: MAKE BETTER HEADER
- *  
- * Embedded Programming C Final Project 
+ * Embedded Programming C Final Project: 
+ *    Audio-reactive color changing LEDs
+ * 
  * Alex Farrell, Maegan Beckage
  * 
  * Term legend:
@@ -28,24 +28,25 @@ void setup() {
 }
 
 void loop() {
-    // Testing input from computer
-    int testInput = -1;
+    // Receive input from computer audio controller.
+    int colorToSet = -1;
     if (Serial.available()>0){
-        testInput = Serial.parseInt();
+        colorToSet = Serial.parseInt();
     }
 
-    // Testing code for PWM
-    if (testInput == Cyan) {
+    // Set LED colors based on received input from the 
+    // computer audio controller.
+    if (colorToSet == Cyan) {
       setLEDColor(CYAN);
-    } else if (testInput == Purple) {
+    } else if (colorToSet == Purple) {
       setLEDColor(PURPLE);
-    } else if (testInput == Green) {
+    } else if (colorToSet == Green) {
       setLEDColor(GREEN);
-    } else if (testInput == Orange) {
+    } else if (colorToSet == Orange) {
       setLEDColor(ORANGE);
-    } else if (testInput == Red) {
+    } else if (colorToSet == Red) {
       setLEDColor(RED);
-    } else if (testInput == Off) {
+    } else if (colorToSet == Off) {
       setLEDColor(OFF);
     }
 }
