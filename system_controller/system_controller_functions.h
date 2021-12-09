@@ -17,7 +17,6 @@ int convertPWM(int invertedPWM) {
  * individual R, G, and B LEDs.
  */
 void setLEDColor(LEDColor color) { 
-    // Inverted TESTING
     for (int i=0; i<NUM_LEDS; ++i) {
         analogWrite(  RED_LED[i], convertPWM(color.redPWM)  );
         analogWrite(GREEN_LED[i], convertPWM(color.greenPWM));
@@ -29,7 +28,6 @@ void setLEDColor(LEDColor color) {
  * This version can be used for testing purposes. 
  */
 void setLEDColor(int redPWM, int greenPWM, int bluePWM) {
-    // Inverted TESTING
     for (int i=0; i<NUM_LEDS; ++i) {
         analogWrite(  RED_LED[i], convertPWM(redPWM)  );
         analogWrite(GREEN_LED[i], convertPWM(greenPWM));

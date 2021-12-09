@@ -29,23 +29,23 @@ void setup() {
 
 void loop() {
     // Testing input from computer
-    String testInput = "";
+    int testInput = -1;
     if (Serial.available()>0){
-        testInput = Serial.readString();
+        testInput = Serial.parseInt();
     }
 
     // Testing code for PWM
-    if (testInput == "Really Soft") {
+    if (testInput == Cyan) {
       setLEDColor(CYAN);
-    } else if (testInput == "Soft") {
+    } else if (testInput == Purple) {
       setLEDColor(PURPLE);
-    } else if (testInput == "Medium") {
+    } else if (testInput == Green) {
       setLEDColor(GREEN);
-    } else if (testInput == "Loud") {
+    } else if (testInput == Orange) {
       setLEDColor(ORANGE);
-    } else if (testInput == "Really Loud") {
+    } else if (testInput == Red) {
       setLEDColor(RED);
-    } else if (testInput == "Off") {
-      setLEDColor(0, 0, 0);
+    } else if (testInput == Off) {
+      setLEDColor(OFF);
     }
 }
