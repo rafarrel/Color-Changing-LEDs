@@ -38,9 +38,6 @@ def process_audio(data):
     elif audio_rms > settings.REALLY_LOUD:
         change_LED_color(settings.RED)         
 
-    # DISPLAY FOR TESTING
-    print(audio_rms)
-
 def callback(in_data, frame_count, time_info, status):
     """Callback function to allow instant processing of audio. Called continuously 
     during the audio stream."""
