@@ -5,4 +5,4 @@ Prototype build for an embedded system that changes the colors of LED string lig
 | Name          | Role          |
 |---------------|-------------- |
 | Alex Farrell  | The Tech Lead |
-| Meagan Beckage | The Hardware Engineer |
+| Maegan Beckage | The Hardware Engineer |
