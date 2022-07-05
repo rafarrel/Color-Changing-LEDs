@@ -1,4 +1,4 @@
-# Embedded-Programming-Final
+# Color-Changing-LEDs
 Prototype build for an embedded system that changes the colors of LED string lights based on the relative volume of sound.
 
 ### Our Team
