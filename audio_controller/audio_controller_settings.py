@@ -9,10 +9,10 @@ arduino = serial.Serial(port='COM6')
 
 # Pyaudio settings
 try:
-    audio_wav_file  = wave.open('../test_songs/' + sys.argv[1] + '.wav', 'rb')
+    audio_wav_file  = wave.open('SONGS_DIRECTORY_HERE' + sys.argv[1] + '.wav', 'rb')
 except (IndexError, FileNotFoundError):
-    print('Audio file not found. Defaulting to Galantis - No Money.')
-    audio_wav_file = wave.open('../test_songs/Galantis - No Money.wav', 'rb')
+    print('Audio file not found. Defaulting to DEFAULT_SONG_NAME.')
+    audio_wav_file = wave.open('SONG_PATH_HERE.wav', 'rb')
 finally:
     audio_processor = pyaudio.PyAudio()
 
