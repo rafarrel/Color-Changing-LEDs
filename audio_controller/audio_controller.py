@@ -1,3 +1,6 @@
+"""
+    Class containing the processing logic for the audio controller.
+"""
 import audioop
 import pyaudio
 import serial
@@ -41,7 +44,7 @@ class AudioController:
             Get the audio file to process and change LED colors to.
         """
         try:
-            self.audio_wav_file  = wave.open('SONGS_DIRECTORY_HERE' + sys.argv[1] + '.wav', 'rb')
+            self.audio_wav_file = wave.open('SONGS_DIRECTORY_HERE' + sys.argv[1] + '.wav', 'rb')
         except (IndexError, FileNotFoundError):
             print('Audio file not found. Defaulting to DEFAULT_SONG_NAME.')
             self.audio_wav_file = wave.open('SONG_PATH_HERE.wav', 'rb')

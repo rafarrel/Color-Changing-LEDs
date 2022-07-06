@@ -6,7 +6,6 @@
 from audio_controller import AudioController
 
 
-# Perform processing
 if __name__ == '__main__':
     controller = AudioController()
 
