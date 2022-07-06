@@ -1,0 +1,3 @@
+numpy~=1.23.0
+pyaudio~=0.2.11
+pyserial~=3.5
