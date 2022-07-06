@@ -1,22 +1,10 @@
-import pyaudio
-import serial
-import sys
-import wave
+"""
+    Settings for the audio controller.
+"""
 
-
-# Arduino connection settings
-arduino = serial.Serial(port='COM6')
-
-# Pyaudio settings
-try:
-    audio_wav_file  = wave.open('SONGS_DIRECTORY_HERE' + sys.argv[1] + '.wav', 'rb')
-except (IndexError, FileNotFoundError):
-    print('Audio file not found. Defaulting to DEFAULT_SONG_NAME.')
-    audio_wav_file = wave.open('SONG_PATH_HERE.wav', 'rb')
-finally:
-    audio_processor = pyaudio.PyAudio()
-
-# Delay count required to change LED colors
+# LED colors should only be changed when the pitch changes 
+# significantly. There needs to be a mini delay between calls
+# to process the audio to give the arduino time to light the LEDs. 
 MAX_DELAY = 50
 
 # Sound codes
