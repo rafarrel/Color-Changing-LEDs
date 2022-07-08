@@ -29,7 +29,6 @@ class AudioController:
             Connect to the Arduino via serial.
         """
         try:
-            # Arduino connection settings
             self.arduino = serial.Serial(port='COM6')
 
             # Delay so Arduino connection can be established.
